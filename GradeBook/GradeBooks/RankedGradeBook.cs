@@ -12,7 +12,7 @@ namespace GradeBook.GradeBooks
             Type = Enums.GradeBookType.Ranked;
         }
 
-        public override Char GetLetterGrade(double averageGrade)
+        public override char GetLetterGrade(double averageGrade)
         {
             if (Students.Count > 5)
             { throw new InvalidOperationException("You must have 5 students to do a ranked grading."); }
@@ -26,7 +26,7 @@ namespace GradeBook.GradeBooks
                 return 'B';
             if (averageGrade>= grades[(threshold*3)-1])
                     return 'C';
-            if (averageGrade >= grades[threshold * 3 - 1])
+            if (averageGrade >= grades[(threshold * 3) - 1])
                 return 'D';
             return 'F';
 
